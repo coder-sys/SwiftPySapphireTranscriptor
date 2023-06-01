@@ -93,7 +93,7 @@ def get_string_format(json_list: list) -> str:
     """
     string = ""
     for segment in json_list:
-        string += segment["text"] + "."
+        string += segment["text"]+"."
         string += " "
     return string
 
@@ -125,5 +125,9 @@ def get_youtube_video_duration(video_id: str, api_key: str) -> float:
         return duration / 60
     except HttpError as e:
         print(f"An error occurred: {e}")
-
-
+def sent_tokenize(string):
+    sent_tokens = nltk.sent_tokenize(string)
+    return sent_tokens
+def tokenize_string(text):
+    tokens = nltk.word_tokenize(text)
+    return tokens
