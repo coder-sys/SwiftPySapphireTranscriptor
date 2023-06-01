@@ -8,7 +8,7 @@ app = Flask(__name__)
 nltk.download("vader_lexicon")
 nltk.download("punkt")
 
-@app.route("/get_transcript/<query>", methods=["GET"])
+@app.route("/get_transcript/<query>", methods=["GET"]) 
 def get_transcript(query):
     limit = 10
     videos_search = VideosSearch(query, limit=limit)  # Limit the search results to 20 videos
