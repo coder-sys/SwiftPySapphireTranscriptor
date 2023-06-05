@@ -128,6 +128,7 @@ def get_youtube_video_duration(video_id: str, api_key: str) -> float:
 def sent_tokenize(string):
     sent_tokens = nltk.sent_tokenize(string)
     return sent_tokens
+
 def tokenize_string(text):
     tokens = nltk.word_tokenize(text)
     return tokens
