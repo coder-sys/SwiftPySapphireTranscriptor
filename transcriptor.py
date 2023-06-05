@@ -39,13 +39,7 @@ def get_transcript(query):
     print(thumbnails[0],names[0],tokens[0])
     return {"thumbnails": thumbnails,"sentTokens":sentTokens,"tokens":tokens , "links": links, "names": names, "transcripts": transcripts,"scores":scores}
 
-"""
-@app.route("/get_transcript/<query>", methods=["GET"])
-def get_transcript(query):
-    return {
-        "txt":query
-    }
-"""
+
 
 if __name__ == '__main__':
     app.run(debug=True)
